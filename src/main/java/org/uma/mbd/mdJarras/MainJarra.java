@@ -8,14 +8,14 @@ public class MainJarra {
 
         System.out.println(j1);
         Jarra j2 = new Jarra(5);
-        j1.llena();
-        j2.llenaDesde(j1);
-        j2.vacia();
-        j2.llenaDesde(j1);
-        j1.llena();
-        j2.llenaDesde(j1);
-        j2.vacia();
-        j2.llenaDesde(j1);
+        j2.llena();
+        j1.llenaDesde(j2);
+        j2.llena();
+        j1.llenaDesde(j2);
+        j1.vacia();
+        j1.llenaDesde(j2);
+        j2.llena();
+        j1.llenaDesde(j2);
 
         System.out.println("j1 " + j1);
         System.out.printf("j2 " + j2);

@@ -29,6 +29,10 @@ public class Jarra {
         }
     }
 
+    public int getContenido() { return contenido;}
+
+    public int getCapacidad() { return capacidad;}
+
     @Override
     public String toString(){
         return "J(" + capacidad + ", "+contenido+")";

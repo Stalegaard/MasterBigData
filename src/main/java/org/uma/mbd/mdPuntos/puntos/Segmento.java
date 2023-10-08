@@ -20,9 +20,9 @@ public class Segmento {
         return origen.distancia(extremo);
     }
 
-    @Override
-    public String toString() {
-        return ()
-    }
+    //@Override
+    //public String toString() {
+    //    return ()
+    //}
 
 }
