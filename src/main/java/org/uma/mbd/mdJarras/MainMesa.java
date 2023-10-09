@@ -1,7 +1,7 @@
 package org.uma.mbd.mdJarras;
 import org.uma.mbd.mdJarras.jarras.*;
 
-public class mainMesa {
+public class MainMesa {
     public static void main(String[] args) {
         Mesa M = new Mesa(7, 5);
 

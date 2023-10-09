@@ -4,10 +4,11 @@ import org.w3c.dom.ls.LSOutput;
 
 public class MainJarra {
     public static void main(String[] args) {
-        Jarra j1 = new Jarra(7);
+        int c1 = Integer.parseInt(args[0]);
+        int c2 = Integer.parseInt(args[1]);
+        Jarra j1 = new Jarra(c1);
+        Jarra j2 = new Jarra(c2);
 
-        System.out.println(j1);
-        Jarra j2 = new Jarra(5);
         j2.llena();
         j1.llenaDesde(j2);
         j2.llena();
