@@ -1,5 +1,5 @@
-package org.uma.mbd.mdPuntos.puntos;
-import static java.lang.Math.*;
+package org.uma.mbd.PrimeraRelacion.mdPuntos.puntos;
+
 public class Punto {
     private double x, y;
     public Punto() { x = y = 0; }

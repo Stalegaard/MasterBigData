@@ -1,4 +1,4 @@
-package org.uma.mbd.mdJarras.jarras;
+package org.uma.mbd.PrimeraRelacion.mdJarras.jarras;
 
 public class Mesa {
     private Jarra JarraA;

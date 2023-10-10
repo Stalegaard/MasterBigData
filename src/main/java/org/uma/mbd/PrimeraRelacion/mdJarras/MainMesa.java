@@ -1,5 +1,5 @@
-package org.uma.mbd.mdJarras;
-import org.uma.mbd.mdJarras.jarras.*;
+package org.uma.mbd.PrimeraRelacion.mdJarras;
+import org.uma.mbd.PrimeraRelacion.mdJarras.jarras.*;
 
 public class MainMesa {
     public static void main(String[] args) {

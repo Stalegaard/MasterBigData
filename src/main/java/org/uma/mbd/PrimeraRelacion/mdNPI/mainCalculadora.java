@@ -1,4 +1,4 @@
-package org.uma.mbd.mdNPI;
+package org.uma.mbd.PrimeraRelacion.mdNPI;
 
 public class mainCalculadora {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.uma.mbd.mdPuntos.puntos;
+package org.uma.mbd.PrimeraRelacion.mdPuntos.puntos;
 
 public class Segmento {
     private Punto origen, extremo;

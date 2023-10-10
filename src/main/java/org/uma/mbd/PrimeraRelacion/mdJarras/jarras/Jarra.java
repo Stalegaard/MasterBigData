@@ -1,4 +1,4 @@
-package org.uma.mbd.mdJarras.jarras;
+package org.uma.mbd.PrimeraRelacion.mdJarras.jarras;
 
 import java.util.Objects;
 

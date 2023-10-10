@@ -1,6 +1,5 @@
-package org.uma.mbd.mdJarras;
-import org.uma.mbd.mdJarras.jarras.*;
-import org.w3c.dom.ls.LSOutput;
+package org.uma.mbd.PrimeraRelacion.mdJarras;
+import org.uma.mbd.PrimeraRelacion.mdJarras.jarras.*;
 
 public class MainJarra {
     public static void main(String[] args) {
