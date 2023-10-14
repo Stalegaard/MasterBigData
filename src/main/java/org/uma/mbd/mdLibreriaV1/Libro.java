@@ -4,6 +4,7 @@ public class Libro {
     private String autor;
     private String titulo;
     private double precioBase;
+    private double precioFinal;
     private static double IVA = 10;
 
     public Libro(String au, String ti, double pb){
@@ -20,6 +21,9 @@ public class Libro {
     }
     public double getPrecioBase() {
         return precioBase;
+    }
+    public double getPrecioFinal() {
+        return precioFinal;
     }
     public static void setIVA(double IVA) {
         Libro.IVA = IVA;
