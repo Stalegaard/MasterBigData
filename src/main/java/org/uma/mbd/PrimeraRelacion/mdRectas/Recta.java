@@ -19,8 +19,11 @@ public class Recta {
     }
 
     private double determinante(double a11, double a12, double a21, double a22){
-
-        return a11 * a22 - a12 * a21;
+        double det = a11 * a22 - a12 * a21;
+        if (det == 0){
+            throw new RuntimeException("Determinante = 0");
+        }
+        return det;
     }
     public double distanciaDesde(Punto p){
         Recta r = perpendicularPor(p);
@@ -29,23 +32,25 @@ public class Recta {
     }
     private Implicita implicita(){
         double a = direccion.getComponenteY();
-        double b = direccion.getComponenteX();
-        double c = b * pto.getY() - a * pto.getX();
+        double b = -direccion.getComponenteX();
+        double c = direccion.getComponenteX() * pto.getY() - direccion.getComponenteY() * pto.getX();
         return new Implicita(a,b,c);
     }
 
     public Punto interseccionCon(Recta s){
+        if (this.paralelaA(s)) {
+            throw new RuntimeException("Rectas paralelas");
+        }
         Implicita r_imp = implicita();
         Implicita s_imp = s.implicita();
-        double x = determinante(-r_imp.c(), r_imp.b(), -s_imp.b(), s_imp.b())/determinante(r_imp.a(), r_imp.b(), s_imp.a(), s_imp.b());
+        double x = determinante(-r_imp.c(), r_imp.b(), -s_imp.c(), s_imp.b())/determinante(r_imp.a(), r_imp.b(), s_imp.a(), s_imp.b());
         double y = determinante(r_imp.a(), -r_imp.c(), s_imp.a(), -s_imp.c())/determinante(r_imp.a(), r_imp.b(), s_imp.a(), s_imp.b());
         return new Punto(x, y);
     }
     public boolean paralelaA(Recta s){ //Son paralelas si sus vectores de direccion son paralelos
-
         return direccion.paraleloA(s.direccion);
     }
-    public Recta paralelelaPor(Punto p){
+    public Recta paralelaPor(Punto p){
         return new Recta(direccion, p);
     }
     public boolean pasaPor(Punto p){ //Pasa por un punto si el vector formado por p y un punto de la recta es paralelo al vector director de la recta
@@ -53,7 +58,7 @@ public class Recta {
         return v.paraleloA(direccion);
     }
     public Recta perpendicularPor(Punto p){
-        return new Recta(direccion.Ortogonal(), p);
+        return new Recta(direccion.ortogonal(), p);
     }
     @Override
     public String toString(){

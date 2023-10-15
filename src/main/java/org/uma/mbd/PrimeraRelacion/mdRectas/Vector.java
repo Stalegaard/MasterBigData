@@ -15,7 +15,7 @@ public class Vector {
 
     public double getComponenteX() { return extremo.getX(); }
     public double getComponenteY() { return extremo.getY(); }
-    public Vector Ortogonal(){
+    public Vector ortogonal(){
         return new Vector(-getComponenteY(), getComponenteX());
     }
     public Punto extremoDesde (Punto org){
