@@ -1,7 +1,4 @@
-package org.uma.mbd.mdRectas;
-
-import java.util.ArrayList;
-import java.util.List;
+package org.uma.mbd.PrimeraRelacion.mdRectas;
 
 public class Recta {
     public record Implicita(double a, double b, double c) { }

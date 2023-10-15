@@ -1,4 +1,4 @@
-package org.uma.mbd.mdUrna;
+package org.uma.mbd.SegundaRelacion.mdUrna;
 
 import java.util.NoSuchElementException;
 import java.util.Random;
@@ -28,7 +28,7 @@ public class Urna {
         }
         int numeroAleatorio = alea.nextInt(n);
         ColorBola Color;
-        if(numeroAleatorio <= nBlancas){
+        if(numeroAleatorio < nBlancas){
             Color = ColorBola.Blanca;
         }
         else{

@@ -1,4 +1,4 @@
-package org.uma.mbd.mdRectas;
+package org.uma.mbd.PrimeraRelacion.mdRectas;
 
 public class Vector {
     private Punto extremo;
