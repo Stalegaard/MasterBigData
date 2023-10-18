@@ -1,4 +1,4 @@
-package org.uma.mbd.PrimeraRelacion.mdNPI;
+package org.uma.mbd.mdNPI;
 
 public class NPI {
     private double x;

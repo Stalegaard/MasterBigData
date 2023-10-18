@@ -1,14 +1,13 @@
 package org.uma.mbd.mdLibreriaV1L.libreria;
+import org.uma.mbd.mdLibreriaV1L.libreria.libreria.Libro;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
 public class Libreria {
-    private List<Libro> libros;
+    private Libro[] libros;
+    private int numLibros;
+    private static final int TAM_DEFECTO = 16;
     public Libreria(){
-
-        libros = new ArrayList<>();
+        this(TAM_DEFECTO);
     }
     public Libreria(int tam){
         libros = new Libro[tam];
@@ -22,17 +21,28 @@ public class Libreria {
     private void addLibro(Libro libro){
         int pos = posicionLibro(libro.getAutor(), libro.getTitulo());
         if (pos < 0){
-            libros.add(libro);
+            aseguraqueCabe();
+            libros[numLibros] = libro;
+            numLibros++;
+            //El libro no está
         }
         else{
             //El libro está
-            libros.set(pos,libro);
+            libros[pos] = libro;
         }
     }
     private int posicionLibro(String autor, String titulo){
-        while (pos < libros.size() && !(autor.equals(libros[pos].getAutor()) && titulo.equals(libros.get(pos).getTitulo())))
+        int pos = 0;
+        while (pos < numLibros && !(autor.equals(libros[pos].getAutor()) && titulo.equals(libros[pos].getTitulo())))
             pos++;
-        return (pos==libros.size()) ? -1 : pos;   //Si es verdad se devuelve -1 y si no pos
+        return (pos==numLibros) ? -1 : pos;   //Si es verdad se devuelve -1 y si no pos
+    }
+
+    private void aseguraqueCabe(){
+        if (numLibros == libros.length) {
+            libros = Arrays.copyOf(libros, libros.length*2);
+
+        }
     }
 
     public void remLibro(String autor, String titulo){
@@ -47,15 +57,24 @@ public class Libreria {
 
     public double getPrecioBase(String autor, String titulo) {
         int pos = posicionLibro(autor, titulo);
-        return pos >= 0 ? libros.get(pos).getPrecioBase():0;
+        return pos >= 0 ? libros[pos].getPrecioBase():0;
     }
     public double getPrecioFinal(String autor, String titulo) {
         int pos = posicionLibro(autor, titulo);
-        return pos >= 0 ? libros.get(pos).getPrecioFinal():0;
+        return pos >= 0 ? libros[pos].getPrecioFinal():0;
     }
 
     @Override
     public String toString() {
-        return libros.toString();
+        String salida = "[";
+        for (int i= 0; i < numLibros; i++){
+            salida += libros[i];
+            if (i < numLibros-1)
+                salida += ",";
+        }
+
+        salida += "]";
+        return salida;
+
     }
 }

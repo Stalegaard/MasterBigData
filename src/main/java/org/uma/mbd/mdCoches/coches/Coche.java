@@ -1,9 +1,9 @@
-package org.uma.mbd.mdCoche;
+package org.uma.mbd.mdCoches.coches;
 
 public class Coche {
     private String nombre;
     private double precio;
-    static private double PIVA = 16;
+    static private double PIVA = 0.16;
 
     public Coche(String n, double p){
         nombre = n;
@@ -13,7 +13,7 @@ public class Coche {
         PIVA = nIVA;
     }
     public double precioTotal(){
-        return precio + PIVA/100 * precio;
+        return precio + PIVA * precio;
     }
     @Override
     public String toString(){

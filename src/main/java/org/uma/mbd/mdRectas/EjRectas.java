@@ -1,4 +1,4 @@
-package org.uma.mbd.PrimeraRelacion.mdRectas;
+package org.uma.mbd.mdRectas;
 
 
 public class EjRectas {

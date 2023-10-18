@@ -1,6 +1,6 @@
-package org.uma.mbd.mdCoche;
+package org.uma.mbd.mdCoches.coches;
 
-class CocheImportado extends Coche {
+public class CocheImportado extends Coche {
     private double homologacion;
     public CocheImportado(String n, double p, double hom) {
         super(n, p);

@@ -1,29 +1,34 @@
-package org.uma.mbd.SegundaRelacion.mdUrna;
-import org.uma.mbd.SegundaRelacion.mdUrna.Urna.ColorBola;
+package org.uma.mbd.mdUrna;
+import org.uma.mbd.mdUrna.Urna.ColorBola;
 
 public class MainUrna {
     public static void main(String[] args) {
         int nBlancas = Integer.parseInt(args[0]);
         int nNegras = Integer.parseInt(args[1]);
 
-        Urna Urna = new Urna(nBlancas,nNegras);
+        Urna urna = new Urna(nBlancas,nNegras);
 
-        int nBolas = Urna.totalBolas();
-
-        while (nBolas >0) {
-            ColorBola b1 = Urna.extraerBola();
-            ColorBola b2 = Urna.extraerBola();
+        while (urna.totalBolas() >0) {
+            ColorBola b1 = urna.extraerBola();
+            ColorBola b2 = urna.extraerBola();
             if(b1 == b2){
-                Urna.ponerBlanca();
+                urna.ponerBlanca();
+                System.out.println("ENTRA BLANCA");
             }
             else{
-                Urna.ponerNegra();
+                urna.ponerNegra();
+                System.out.println("ENTRA NEGRA");
             }
-            if(nBolas==1){
-                ColorBola ult_bola = Urna.extraerBola();
-                System.out.printf("La ultima bola es de color: " + ult_bola);
+            System.out.println("Bola1: " + b1);
+            System.out.println("Bola2: " + b2);
+            System.out.println(" ");
+            if(urna.totalBolas()==1){
+                ColorBola ult_bola = urna.extraerBola();
+                System.out.println("La ultima bola es de color: " + ult_bola);
             }
-            nBolas--;
+
+
+            System.out.println("Numero de bolas: " + urna.totalBolas());
         }
     }
 }

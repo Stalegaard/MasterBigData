@@ -1,4 +1,4 @@
-package org.uma.mbd.mdCoche;
+package org.uma.mbd.mdCoches;
 
 import org.uma.mbd.mdCoches.coches.Coche;
 import org.uma.mbd.mdCoches.coches.CocheImportado;

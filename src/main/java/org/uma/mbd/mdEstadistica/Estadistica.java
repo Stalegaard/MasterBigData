@@ -1,4 +1,4 @@
-package org.uma.mbd.PrimeraRelacion.mdEstadistica;
+package org.uma.mbd.mdEstadistica;
 
 public class Estadistica {
 

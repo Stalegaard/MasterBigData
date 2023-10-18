@@ -1,8 +1,7 @@
-package org.uma.mbd.PrimeraRelacion.mdTesoro;
+package org.uma.mbd.mdTesoro;
 
-import org.uma.mbd.PrimeraRelacion.mdRectas.Punto;
-import org.uma.mbd.PrimeraRelacion.mdRectas.Recta;
-import org.uma.mbd.PrimeraRelacion.mdRectas.Vector;
+import org.uma.mbd.mdRectas.Punto;
+import org.uma.mbd.mdRectas.Vector;
 
 public class Tesoro {
     private Punto PalmeraAmarilla;

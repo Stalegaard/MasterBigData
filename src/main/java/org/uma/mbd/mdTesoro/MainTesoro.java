@@ -1,6 +1,6 @@
-package org.uma.mbd.PrimeraRelacion.mdTesoro;
+package org.uma.mbd.mdTesoro;
 
-import org.uma.mbd.PrimeraRelacion.mdRectas.Punto;
+import org.uma.mbd.mdRectas.Punto;
 
 public class MainTesoro {
     public static void main(String[] args) {
