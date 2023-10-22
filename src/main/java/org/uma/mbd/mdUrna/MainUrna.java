@@ -22,13 +22,12 @@ public class MainUrna {
             System.out.println("Bola1: " + b1);
             System.out.println("Bola2: " + b2);
             System.out.println(" ");
-            if(urna.totalBolas()==1){
-                ColorBola ult_bola = urna.extraerBola();
-                System.out.println("La ultima bola es de color: " + ult_bola);
-            }
-
 
             System.out.println("Numero de bolas: " + urna.totalBolas());
         }
+
+        ColorBola ult_bola = urna.extraerBola();
+        System.out.println("La ultima bola es de color: " + ult_bola);
+        }
     }
-}
+
