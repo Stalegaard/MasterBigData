@@ -10,7 +10,7 @@ public class CeroMax implements Problema {
     public double evalua(Cromosoma cromosoma) {
         double fitness = 0;
         for(int i = 0; 0 < cromosoma.datos.length; i++){
-            if(cromosoma.datos[i] == 0){
+            if(cromosoma.getGen(i) == 0){
                 fitness++;
             }
         }

@@ -10,7 +10,7 @@ public class OneMax implements Problema {
 	public double evalua(Cromosoma cromosoma) {
 		double fitness = 0;
 		for(int i = 0; i < cromosoma.datos.length; i++){
-			if(cromosoma.datos[i] == 1){
+			if(cromosoma.getGen(i) == 1){
 				fitness++;
 			}
 		}

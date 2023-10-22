@@ -29,7 +29,7 @@ public class Individuo {
 	 */
 	public Individuo(Cromosoma cromosoma, Problema problema) {
 		this.cromosoma = new Cromosoma(cromosoma);
-		fitness = problema.evalua(cromosoma);
+		fitness = problema.evalua(this.cromosoma);
 	}
 
 	/**
