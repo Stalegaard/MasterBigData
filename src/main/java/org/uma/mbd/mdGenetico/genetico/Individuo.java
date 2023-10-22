@@ -15,7 +15,7 @@ public class Individuo {
 	 */
 	public Individuo(int longitud, Problema problema) {
 		cromosoma = new Cromosoma(longitud, true);
-		fitness = problema.evalua(cromosoma);
+		fitness = problema.evalua(this.cromosoma);
 	}
 
 	/**
