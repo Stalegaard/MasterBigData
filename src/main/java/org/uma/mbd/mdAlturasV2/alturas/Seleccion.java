@@ -1,4 +1,4 @@
-package org.uma.mbd.mdAlturas.alturas;
+package org.uma.mbd.mdAlturasV2.alturas;
 
 public interface Seleccion {
     boolean test(Pais pais);

@@ -1,8 +1,6 @@
-package org.uma.mbd.mdAlturas.alturas;
+package org.uma.mbd.mdAlturasV2.alturas;
 
-import org.uma.mbd.mdBusV1.buses.Bus;
-
-public class EnContinente implements Seleccion{
+public class EnContinente implements Seleccion {
     private String texto;
 
     public EnContinente(String t){

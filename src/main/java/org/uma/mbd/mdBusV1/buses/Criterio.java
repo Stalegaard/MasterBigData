@@ -1,2 +1,5 @@
-package org.uma.mbd.mdBusV1;public interface Criterio {
+package org.uma.mbd.mdBusV1.buses;
+
+public interface Criterio {
+    public boolean esSeleccionable (Bus bus);
 }

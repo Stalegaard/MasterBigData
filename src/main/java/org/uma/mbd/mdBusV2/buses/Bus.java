@@ -1,6 +1,6 @@
-package org.uma.mbd.mdBusV1.buses;
+package org.uma.mbd.mdBusV2.buses;
 import java.util.Objects;
-public class Bus {
+public class Bus implements Comparable<Bus>{
     private int codBus;
     private String matricula;
     private int codLinea;
@@ -42,5 +42,14 @@ public class Bus {
 
     public String toString() {
         return "Bus( " + codBus + ", " + matricula + ", " + codLinea + " )";
+    }
+
+    @Override
+    public int compareTo(Bus b) {
+        int resultado = matricula.compareTo(b.matricula);
+        if (resultado == 0){
+            resultado = Integer.compare(codBus,b.codBus);
+        }
+        return resultado;
     }
 }

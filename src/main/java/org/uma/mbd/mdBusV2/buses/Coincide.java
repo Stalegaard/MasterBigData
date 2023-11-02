@@ -1,6 +1,6 @@
-package org.uma.mbd.mdBusV1.buses;
+package org.uma.mbd.mdBusV2.buses;
 
-public class Coincide implements Criterio{
+public class Coincide implements Criterio {
     private Bus bus;
 
     public Coincide(Bus b){

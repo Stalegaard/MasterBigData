@@ -1,6 +1,6 @@
-package org.uma.mbd.mdBusV1.buses;
+package org.uma.mbd.mdBusV2.buses;
 
-public class PorLinea implements Criterio{
+public class PorLinea implements Criterio {
     private int codLinea;
 
     public PorLinea(int cod){

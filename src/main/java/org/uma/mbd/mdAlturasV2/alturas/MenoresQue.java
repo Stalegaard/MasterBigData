@@ -1,6 +1,6 @@
-package org.uma.mbd.mdAlturas.alturas;
+package org.uma.mbd.mdAlturasV2.alturas;
 
-public class MenoresQue implements Seleccion{
+public class MenoresQue implements Seleccion {
     private double alturaMax;
     public MenoresQue(double a){
         alturaMax = a;

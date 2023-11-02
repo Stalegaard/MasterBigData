@@ -1,6 +1,4 @@
-package org.uma.mbd.mdAlturas.alturas;
-import org.uma.mbd.mdBusV1.buses.Bus;
-import org.uma.mbd.mdBusV1.buses.Criterio;
+package org.uma.mbd.mdAlturasV2.alturas;
 
 import java.io.IOException;
 import java.nio.file.Files;

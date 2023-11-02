@@ -1,2 +1,4 @@
-package org.uma.mbd.mdNPI;public record Valor() {
+package org.uma.mbd.mdNPI;
+
+public record Valor() {
 }

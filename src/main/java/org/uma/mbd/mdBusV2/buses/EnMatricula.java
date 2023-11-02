@@ -1,6 +1,6 @@
-package org.uma.mbd.mdBusV1.buses;
+package org.uma.mbd.mdBusV2.buses;
 
-public class EnMatricula implements Criterio{
+public class EnMatricula implements Criterio {
 
     private String dato;
 

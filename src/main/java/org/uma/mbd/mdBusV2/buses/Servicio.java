@@ -1,4 +1,4 @@
-package org.uma.mbd.mdBusV1.buses;
+package org.uma.mbd.mdBusV2.buses;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class Servicio {
         Bus bus;
         for (String archivo : Files.readAllLines(Paths.get(file))) {
             try (Scanner scLinea = new Scanner(archivo)) {
-                scLinea.useDelimiter("[,]+");
+                scLinea.useDelimiter("[,;-]+");
                 //Asignación
                 codBus = scLinea.nextInt();
                 matricula = scLinea.next();
@@ -49,23 +49,28 @@ public class Servicio {
         }
     }
 
-    public List<Bus> filtra(Criterio criterio) {
-        return buses.stream()
-                .filter(bus -> criterio.esSeleccionable(bus))
-                .toList();
+    public Set<Bus> filtra(Criterio criterio,Comparator<Bus> comparator) {
+        Set<Bus> setBus = new TreeSet<>(comparator);
+        for (Bus bus:buses) {
+            if (criterio.esSeleccionable(bus)){
+                setBus.add(bus);
+            }
+
+        }
+        return setBus;
     }
 
-    public void guarda(PrintWriter pw, Criterio criterio) {
+    public void guarda(PrintWriter pw, Criterio criterio,Comparator<Bus> comparator) {
         pw.println(criterio);
-        List<Bus> busesFiltrados = filtra(criterio);
+        Set<Bus> busesFiltrados = filtra(criterio,comparator);
         for (Bus busF : busesFiltrados) {
             pw.println(busF);
         }
     }
 
-    public void guarda(String file, Criterio criterio) throws FileNotFoundException {
+    public void guarda(String file, Criterio criterio,Comparator<Bus> comparator) throws FileNotFoundException {
         try (PrintWriter pw = new PrintWriter(file)) {
-            guarda(pw, criterio);
+            guarda(pw, criterio,comparator);
         } catch (IOException e) {
             System.err.println("Ha habido un error con el fichero");
         }
